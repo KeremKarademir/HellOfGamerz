@@ -1,0 +1,25 @@
+﻿@model HellOfGamerz.Models.Author
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.Name @Model.LastName</h2>
+
+@Html.LabelFor(m => m.Name) : <p>@Model.Name</p>
+<br>
+
+@Html.LabelFor(m => m.LastName) : <p>@Model.LastName</p>
+<br>
+<p></p>
+@{ 
+    if (Model.Articles.Count > 0) 
+    { 
+        foreach (var article in Model.Articles) {
+            <p class="lead">article</p>
+        }
+    }
+}
+<br>
+
+

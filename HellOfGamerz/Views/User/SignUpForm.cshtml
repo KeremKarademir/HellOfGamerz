@@ -1,0 +1,37 @@
+﻿@model  HellOfGamerz.Models.User
+@{
+    ViewBag.Title = "SignUpForm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>SignUpForm</h2>
+
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+        @Html.LabelFor(u => u.Name)
+        @Html.TextBoxFor(u => u.Name)
+        @Html.ValidationMessageFor(u => u.Name)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(u => u.LastName)
+        @Html.TextBoxFor(u => u.LastName)
+        @Html.ValidationMessageFor(u => u.LastName)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(u => u.Nickname)
+        @Html.TextBoxFor(u => u.Nickname)
+        @Html.ValidationMessageFor(u => u.Nickname)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(u => u.Password)
+        @Html.PasswordFor(u => u.Password)
+        @Html.ValidationMessageFor(u => u.Password)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(u => u.Email)
+        @Html.TextBoxFor(u => u.Email)
+        @Html.ValidationMessageFor(u => u.Email)
+    </div>
+    <input type="submit" class="btn btn-primary">
+}
